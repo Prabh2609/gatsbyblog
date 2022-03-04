@@ -18,9 +18,16 @@ const NavbarComponent = () => {
                 <Nav.Link >
                   <Link to={`/Category`} >Lifestyle</Link>
                 </Nav.Link>
-                <Nav.Link href="#link">Photodiary</Nav.Link>
-                <Nav.Link href ='#music'>Music</Nav.Link>
-                <Nav.Link href ='#music'>Travel</Nav.Link>
+                <Nav.Link >
+                  <Link to={'/Category'}>Photodiary</Link>
+                </Nav.Link>
+                <Nav.Link >
+                  <Link to={'/Category'}>Music</Link>
+                </Nav.Link>
+                <Nav.Link >
+                  <Link to={'/Category'}>Travel</Link>
+                  
+                </Nav.Link>
             </Nav>
             </Navbar.Collapse>
         </Container>
