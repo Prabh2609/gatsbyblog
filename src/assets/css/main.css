@@ -24,7 +24,7 @@ a:hover{
 }
 .cardImage{
     border-radius: 4px;
-    height:24rem;
+    height:12rem;
 }
 .card{
     box-sizing: border-box;
@@ -41,6 +41,34 @@ a:hover{
     margin-top: 8px;
     font-size:16px;
     color: #626262;
+}
+.blogImage{
+    border-radius: 4px;
+    margin-bottom:12px;
+    height:70vh;
+    margin-left:10%;;
+}
+@media (max-width:322px){
+    .blogImage{
+        width:100%;
+        margin-left:0px;
+        margin-bottom: 12px;;
+    }
+}
+@media (max-width:376px){
+    .blogImage{
+        width:100%;
+        margin-left: 0px;;
+        margin-bottom: 12px;;
+    }
+}
+@media (max-width:769px){
+    .blogImage{
+        width:100%;
+        height: 70vh;
+        margin-left: 0px;;
+        margin-bottom: 12px;;
+    }
 }
 
 

@@ -15,7 +15,9 @@ const NavbarComponent = () => {
             <Navbar.Toggle aria-controls="basic-navbar-nav" className='justify-content-end'/>
             <Navbar.Collapse id="basic-navbar-nav" className='justify-content-end'>
             <Nav>
-                <Nav.Link href="#home">Lifestyle</Nav.Link>
+                <Nav.Link >
+                  <Link to={`/Category`} >Lifestyle</Link>
+                </Nav.Link>
                 <Nav.Link href="#link">Photodiary</Nav.Link>
                 <Nav.Link href ='#music'>Music</Nav.Link>
                 <Nav.Link href ='#music'>Travel</Nav.Link>

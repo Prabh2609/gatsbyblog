@@ -43,6 +43,15 @@ export default {
       type: 'datetime',
     },
     {
+      name:'demo',
+      title:'Demo',
+      type:'array',
+      of:[
+        {type:'block'},
+        {type:'image'}
+      ]
+    },
+    {
       name: 'body',
       title: 'Body',
       type: 'blockContent',

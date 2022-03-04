@@ -2,7 +2,7 @@ import React from "react"
 import Layout from "../Components/Layout"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { graphql,useStaticQuery,Link } from 'gatsby'
-import { Card, Col, Container, Row } from "react-bootstrap";
+import { Card, Col, Container, Form, Row } from "react-bootstrap";
 import { GatsbyImage, getImage, StaticImage } from "gatsby-plugin-image";
 import '../assets/css/main.css'
 import slugify from "slugify";
@@ -37,7 +37,8 @@ const Home=()=> {
   console.log(allPosts[0])
   return <Layout>
     
-    <Container key={allPosts[0].id}>
+    <Container key={allPosts[0].id} className='mb-4'>
+      <Link to={`/${slugify(allPosts[0].title,{lower:true})}`}>
       <Row>
         <GatsbyImage
           image= {pathToFeaturedImage}
@@ -54,6 +55,7 @@ const Home=()=> {
       <Row>
         <p >{allPosts[0].body[0].children[0].text}</p>
       </Row>
+      </Link>
     </Container>
     <Container >
       <Row xs={1} md={2} className='g-4 h-2'>
@@ -89,8 +91,14 @@ const Home=()=> {
       </Row>
       <Container>
         <Row className='bg-light p-4 my-4'>
-          <div className='p-4'>
+          <div className='p-4 text-center'>
             <h4>Sign Up to our newsletter!!</h4>
+            <Form>
+              <Form.Group className="mb-3" >
+              <Form.Group className="mb-3" controlId="formBasicEmail"></Form.Group>
+              <Form.Control type="email" placeholder="Enter email" />
+              </Form.Group>
+            </Form>
           </div>          
         </Row>
         <Row xs={1} md={2} className='g-4 h-2'>
@@ -98,9 +106,11 @@ const Home=()=> {
             allPosts.map((item,index)=>{
               const pathToImage = getImage(item.mainImage.asset.gatsbyImageData)
               const text = item.body[0].children[0].text
+              const slug = slugify(item.title,{lower:true})
               return(
                 index>4?
-                  <Col key={index}>
+                  <Link key={index} to={`/${slug}`}>
+                  <Col >
                     <Card className="card">
                     <GatsbyImage
                         image={pathToImage}
@@ -114,6 +124,7 @@ const Home=()=> {
                       </Card.Body>
                     </Card>
                   </Col>
+                  </Link>
                 :
                 null
               )

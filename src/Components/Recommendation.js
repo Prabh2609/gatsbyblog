@@ -27,15 +27,14 @@ const Recommendation = ({category}) => {
     return (
     <Container className='bg-light'>
         <Row>
-            <p className='subtitle'>You May Also Like</p>
+            <p className='subtitle text-center p-4'>You May Also Like</p>
         </Row>
-        <Row className='p-4'>
+        <Row className='p-4' xs={1} md={2} lg={3}>
             {
                 data.allSanityPost.nodes.map((item,indx)=>{
                     const slug = slugify(item.title,{lower:true})
                     return(
-                        
-                            <Col>
+                            <Col className='mb-4'>
                             <Link to={`/${slug}`}>
                                 <GatsbyImage
                                     image={item.mainImage.asset.gatsbyImageData}
