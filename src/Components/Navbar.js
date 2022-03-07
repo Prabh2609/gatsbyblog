@@ -16,16 +16,16 @@ const NavbarComponent = () => {
             <Navbar.Collapse id="basic-navbar-nav" className='justify-content-end'>
             <Nav>
                 <Nav.Link >
-                  <Link to={`/Category`} >Lifestyle</Link>
+                  <Link to={`/Lifestyle`} >Lifestyle</Link>
                 </Nav.Link>
                 <Nav.Link >
-                  <Link to={'/Category'}>Photodiary</Link>
+                  <Link to={'/Photodiary'}>Photodiary</Link>
                 </Nav.Link>
                 <Nav.Link >
-                  <Link to={'/Category'}>Music</Link>
+                  <Link to={'/Music'}>Music</Link>
                 </Nav.Link>
                 <Nav.Link >
-                  <Link to={'/Category'}>Travel</Link>
+                  <Link to={'/Travel'}>Travel</Link>
                   
                 </Nav.Link>
             </Nav>
